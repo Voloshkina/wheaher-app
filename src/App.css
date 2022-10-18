@@ -1,38 +1,95 @@
 .App {
+  height: 100vh;
   text-align: center;
-}
+  position: relative;
+  background: hsla(195, 70%, 54%, 1);
+  color: white;
+  background: linear-gradient(
+    45deg,
+    hsla(195, 70%, 54%, 1) 0%,
+    hsla(243, 54%, 47%, 1) 0%,
+    hsla(197, 75%, 78%, 1) 100%
+  );
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(195, 70%, 54%, 1) 0%,
+    hsla(243, 54%, 47%, 1) 0%,
+    hsla(197, 75%, 78%, 1) 100%
+  );
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(195, 70%, 54%, 1) 0%,
+    hsla(243, 54%, 47%, 1) 0%,
+    hsla(197, 75%, 78%, 1) 100%
+  );
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.wrapper {
+  position: absolute;
+  height: 90vh;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 30px;
+  background-image: url(../src/assets/weather.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.75);
+}
+.warm {
+  background-image: url(../src/assets/warm.jpeg);
+}
+.sunny {
+  background-image: url(../src/assets/sunny.jpeg);
+}
+.rainy {
+  background-image: url(../src/assets/rainy.jpeg);
+}
+.snow {
+  background-image: url(../src/assets/snow.jpeg);
+}
+.title {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.input {
+  width: 100%;
+  padding: 5px 10px;
+  background-color: rgba(34, 32, 32, 0.5);
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+  width: 100%;
+  padding: 5px 10px;
+  background-color: rgba(34, 32, 32, 0.5);
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  color: rgb(255, 255, 255);
+}
+.temperature {
+  margin: 0 auto;
+  width: 140px;
+  padding: 10px;
+  background-color: rgba(34, 32, 32, 0.5);
+  font-size: 30px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.weaher-box {
+  margin: 10px 0;
+}
+.city,
+.condition {
+  font-weight: 700;
+  padding: 5px;
 }
